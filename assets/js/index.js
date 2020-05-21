@@ -1,5 +1,6 @@
-function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCode) {
-    return `
+function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCode, videoURL) {
+
+    let templateCode = `
 <section id="${secID}" class="page">
     <header>
         <a href="#home" class="btn btn-primary">Home&nbsp;<i class="fas fa-home"></i></a>
@@ -14,28 +15,60 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
         <table class="table text-center">
             <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Windows <i class="fab fa-windows fa-lg"></i></th>
-                    <th scope="col">Linux <i class="fab fa-linux fa-lg"></i></th>
-                    <th scope="col">Source Code <i class="fas fa-code-branch fa-lg"></i></th>
+                    <th scope="col"><i class="fab fa-windows fa-lg"></i>&nbsp;&nbsp;Windows</th>
+                    <th scope="col"><i class="fab fa-linux fa-lg"></i>&nbsp;&nbsp;Linux</th>
+                    <th scope="col"><i class="fas fa-code-branch fa-lg">&nbsp;&nbsp;Source Code </i></th>
+                    <th scope="col"><i class="fas fa-film fa-lg"></i>&nbsp;&nbsp;Video</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><a  class="btn btn-outline-dark dwlB" href="./downloads/${dwldWin}"
+                   `;
+
+    if (dwldWin) {
+
+        templateCode += `<td><a  class="btn btn-outline-dark dwlB" href="./downloads/${dwldWin}"
                             target="_blank" role="button"><i class="fas fa-download fa-lg"></i></a></td>
                     <td><a  class="btn btn-outline-dark dwlB" href="./downloads/${dwldLinux}"
-                            target="_blank" role="button"><i class="fas fa-download fa-lg"></i></a>
-                    </td>
-                    <td><a  class="btn btn-outline-dark dwlB"
-                            href="https://github.com/PanTheoITS/${srcCode}" target="_blank"
-                            role="button">GitHub
-                            <i class="fab fa-github-square fa-lg"></i></a></td>
+                            target="_blank" role="button"><i class="fas fa-download fa-lg"></i></a></td>`
+    } else {
+
+        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>
+                        <td><i class="fas fa-times fa-2x"></i></td>`;
+    }
+
+
+    if (srcCode) {
+
+        templateCode += `<td><a  class="btn btn-outline-dark dwlB"
+                        href="https://github.com/PanTheoITS/${srcCode}" target="_blank"
+                        role="button"><i class="fab fa-github-square fa-lg"></i>&nbsp;GitHub
+                        </a></td>`;
+    } else {
+
+        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>`;
+    }
+
+    if (videoURL) {
+
+        templateCode += ` <td><a  class="btn btn-outline-dark dwlB"
+                        href="https://www.youtube.com/watch?v=${videoURL}" target="_blank"
+                        role="button"><i class="fab fa-youtube fa-lg"></i>&nbsp;YouTube
+                        </a></td>`;
+    } else {
+
+        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>`;
+    }
+
+    templateCode += `
                 </tr>
             </tbody>
         </table>
         <br /><br />
     </div>
 </section>`;
+
+    return templateCode;
 }
 
 
@@ -63,6 +96,7 @@ function createProjectItems() {
         let dwldWin = projects[i]['dwldWin'];
         let dwldLinux = projects[i]['dwldLinux'];
         let srcCode = projects[i]['srcCode'];
+        let videoURL = projects[i]['videoURL']
 
         projItem.classList.add('card', 'projItem');
         imgElement.classList.add('card-img-top');
@@ -79,7 +113,7 @@ function createProjectItems() {
             linkElement.textContent = 'Go';
             linkElement.href = projects[i]['hashtag'];
             bodyElement.append(titleElement, textElement, linkElement);
-            document.querySelector('#projPages').innerHTML += mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCode);
+            document.querySelector('#projPages').innerHTML += mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCode, videoURL);
         } else {
             bodyElement.append(titleElement, textElement);
         }

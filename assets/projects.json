@@ -8,7 +8,8 @@
         "dwldWin": "Pyrrha-win32-ia32.zip",
         "dwldLinux": "Pyrrha-linux-x64.tar.xz",
         "srcCode": "pyrrha_random_data_generator",
-        "title": "Pyrrha: Random User Data Generator"
+        "title": "Pyrrha: Random User Data Generator",
+        "videoURL": ""
     },
     {
         "name": "Unnamed Project",
@@ -19,6 +20,7 @@
         "dwldWin": "",
         "dwldLinux": "",
         "srcCode": "",
-        "title": ""
+        "title": "",
+        "videoURL": ""
     }
 ]
