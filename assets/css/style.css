@@ -21,6 +21,34 @@ body {
     display: none;
 }
 
+.info {
+
+    border-bottom: 1px solid #fff;
+    background-image: url(../img/backImage.jpg);
+}
+
+.pic-container {
+    display:inline-block;
+}
+
+.pic {
+    border:  2px  solid #fff;
+    border-radius: 50%;
+    height:120px;
+}
+
+span.shade  {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.description {
+    display:inline-block;
+    font-size: 1.3rem;
+    color: #fff;
+    vertical-align: middle;
+}
+
+
 header {
     margin: 10px;
 }
@@ -42,7 +70,9 @@ header {
 }
 
 .projItem:hover {
-    box-shadow: 3px 3px 5px #000;
+    box-shadow: 0px 0px 5px 2px #000;
+    width: calc(330px*1.05);
+    height: calc(430px*1.05);
 }
 
 .card-img-top {
@@ -66,7 +96,6 @@ header {
 
 .mainDiv {
     background-color: #A88F5D;
-    
     border: 1px black  solid;
     border-radius: 20px;
 }

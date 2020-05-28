@@ -5,11 +5,12 @@
         "image": "pyrrha.png",
         "status": "Completed",
         "hashtag": "#pyrrha",
-        "dwldWin": "Pyrrha-win32-ia32.zip",
-        "dwldLinux": "Pyrrha-linux-x64.tar.xz",
+        "dwldWin": "Pyrrha_data_generator-win.zip",
+        "dwldLinux": "Pyrrha_data_generator-linux.tar.xz",
         "srcCode": "pyrrha_random_data_generator",
         "title": "Pyrrha: Random User Data Generator",
-        "videoURL": ""
+        "videoURL": "",
+        "webURL": ""
     },
     {
         "name": "Unnamed Project",
@@ -21,6 +22,7 @@
         "dwldLinux": "",
         "srcCode": "",
         "title": "",
-        "videoURL": ""
+        "videoURL": "",
+        "webURL": ""
     }
 ]
