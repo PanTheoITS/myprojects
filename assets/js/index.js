@@ -122,7 +122,7 @@ function createProjectItems() {
         statusElement.textContent = status;
         if (secID != '') {
             linkElement.classList.add('btn', 'homeB');
-            linkElement.textContent = 'Go';
+            linkElement.textContent = 'Show More';
             linkElement.href = projects[i]['hashtag'];
             bodyElement.append(titleElement, textElement, linkElement);
             document.querySelector('#projPages').innerHTML += mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCode, videoURL, webURL);
