@@ -13,6 +13,19 @@
         "webURL": ""
     },
     {
+        "name": "Thales",
+        "description": "No Description.",
+        "image": "uc.png",
+        "status": "In Progress",
+        "hashtag": "#",
+        "dwldWin": "",
+        "dwldLinux": "",
+        "srcCode": "",
+        "title": "",
+        "videoURL": "",
+        "webURL": ""
+    },
+    {
         "name": "Unnamed Project",
         "description": "No Description.",
         "image": "uc.png",

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
 
 html {
-    background-color: #506773;  
+    background-color: #3D4B27;
 }
 
 body {
@@ -9,6 +9,7 @@ body {
 }
 
 .title {
+    color:#bbbda0;
     text-shadow: 3px 3px 5px #000;
 }
 
@@ -59,8 +60,8 @@ header {
 }
 
 .projItem {
-    background-color: #A88F5D;
-    color: #000;
+    background-color: #a28761;
+    color: #473b2a;
     border: 1px black solid;
     margin: 5px 0 5px 20px;
     height: 430px;
@@ -95,7 +96,8 @@ header {
 }
 
 .mainDiv {
-    background-color: #A88F5D;
+    background-color: #a28761;
+    color: #473b2a;
     border: 1px black  solid;
     border-radius: 20px;
 }
@@ -104,9 +106,25 @@ span {
     font-weight: bold;
 }
 
+.homeB {
+    background-color:#bbbda0;
+    color: #3D4B27;
+}
+
+.homeB:hover {
+    background-color:#328373;
+    color: #bbbda0;
+}
+
+
+
 .statusPos  {
     position: absolute;
     bottom: 0px;
     width:100%
   
+}
+
+.dwlB {
+    color: #473b2a;
 }

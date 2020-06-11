@@ -3,7 +3,7 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
     let templateCode = `
 <section id="${secID}" class="page">
     <header>
-        <a href="#home" class="btn btn-primary">Home&nbsp;<i class="fas fa-home"></i></a>
+        <a href="#home" class="btn homeB"><i class="fas fa-home"></i>&nbsp;Home</a>
     </header>
     <div class="container mainDiv">
         <div class="text-center">
@@ -34,8 +34,8 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
                             target="_blank" role="button"><i class="fas fa-download fa-lg"></i></a></td>`
     } else {
 
-        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>
-                        <td><i class="fas fa-times fa-2x"></i></td>`;
+        templateCode += `<td><i class="fas fa-times fa-2x dwlB"></i></td>
+                        <td><i class="fas fa-times fa-2x dwlB"></i></td>`;
     }
 
 
@@ -47,7 +47,7 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
                         </a></td>`;
     } else {
 
-        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>`;
+        templateCode += `<td><i class="fas fa-times fa-2x dwlB"></i></td>`;
     }
 
     if (videoURL) {
@@ -58,7 +58,7 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
                         </a></td>`;
     } else {
 
-        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>`;
+        templateCode += `<td><i class="fas fa-times fa-2x dwlB"></i></td>`;
     }
 
     if (webURL) {
@@ -68,7 +68,7 @@ function mainTemplate(secID, imgSrc, sTitle, content, dwldWin, dwldLinux, srcCod
                         role="button"><i class="far fa-file-code fa-lg"></i>&nbsp;Web Page
                         </a></td>`;
     } else {
-        templateCode += `<td><i class="fas fa-times fa-2x"></i></td>`;
+        templateCode += `<td><i class="fas fa-times fa-2x dwlB"></i></td>`;
     }
 
     templateCode += `
@@ -121,7 +121,7 @@ function createProjectItems() {
         statusElement.classList.add('statusPos', 'p-2', 'text-center', 'text-white', (status != 'Completed' && status != 'Pending') ? 'bg-primary' : status);
         statusElement.textContent = status;
         if (secID != '') {
-            linkElement.classList.add('btn', 'btn-primary');
+            linkElement.classList.add('btn', 'homeB');
             linkElement.textContent = 'Go';
             linkElement.href = projects[i]['hashtag'];
             bodyElement.append(titleElement, textElement, linkElement);
