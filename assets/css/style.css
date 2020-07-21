@@ -68,6 +68,7 @@ header {
     width: 330px;
     display: inline-block;
     vertical-align: middle;
+    transition: width 0.20s, height 0.20s;
 }
 
 .projItem:hover {
